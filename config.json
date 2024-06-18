@@ -1,0 +1,9 @@
+{
+    "raw_image_path" : "C:/Users/smadmin/Documents/Projects/langanki/resources/media/imagesRaw",
+    "processed_image_path" : "C:/Users/smadmin/Documents/Projects/langanki/resources/media/images",
+    "sound_path" : "C:/Users/smadmin/Documents/Projects/langanki/resources/media/pronunciation",
+    "wordlist_path" : "C:/Users/smadmin/Documents/Projects/langanki/resources",
+    "styling_path" : "C:/Users/smadmin/Documents/Projects/langanki/resources/configs/basictemplate.css",
+    "package_path" : "C:/Users/smadmin/Documents/Projects/langanki/resources/packages",
+    "test_path" : "C:/Users/smadmin/Documents/Projects/langanki/tests/testdata"
+}
