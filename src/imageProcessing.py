@@ -50,7 +50,7 @@ def processImage(word_info):
                     print("Image saved to:", outFile)
 
                     # Add file to word_info mediadb.
-                    image_mediadb.append(outFile[index])
+                    image_mediadb.append(outFile)
         else:
             print(f"Image file for {word} already present, skipping.")
             for file in outputFile:

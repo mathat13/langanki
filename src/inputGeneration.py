@@ -24,7 +24,7 @@ def generateWordList():
             if 1 <= len(word_dict) <= 2 and word_dict['word']:
                 word = word_dict['word']
                 gender =  word_dict['gender']
-                wordlist = { 
+                wordlist = {
                     'word': word,
                     'gender': gender,
                     'id': 0,
@@ -35,7 +35,7 @@ def generateWordList():
 
             else:
                 print(f"Bad data on line {counter + 2}  in basicwordlist, please check there are 1-2 fields for this word, skipping.")
-                yield False        
+                yield False
 
     with open(pathJoiner(loadConfig("wordlist_path"), "wordlistadvanced.csv"), encoding="utf-8-sig") as file:
         advancedwordlist = csv.DictReader(file, restval='')
@@ -69,10 +69,10 @@ def getWordModel(word_info, modelDB):
 def createField(word_info):
     word = word_info['word']
     image_paths = word_info['image_mediadb']
-    
 
     # TODO Split paths into pronunciation and image paths and create functions to read from each.
     # TODO Work out how to add gender gracefully to basic cards.
+    # TODO Turn into switch statement.
     if word_info['id'] == 0:
         field = [getImageHTML(image_paths), word, f'[sound:{word}.mp3]', f'Genere: {getGenderField(word_info)}', getIPA(word)]
     
@@ -88,7 +88,6 @@ def getImageHTML(image_db):
         image_fields.append(f'<img src="{fileName}">')
     return ''.join(image_fields)
 
-
 def getGenderField(word_info):
     try:
         if word_info['gender']:
@@ -96,7 +95,6 @@ def getGenderField(word_info):
         return 'n/a'
     except KeyError:
         return 'n/a'
-
 
 def getClozeSentence(sentence, word):
     return re.sub(rf'\b{word}\b', f'{{{{c1::{word}}}}}', sentence)

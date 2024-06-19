@@ -8,9 +8,9 @@ from src.inputGeneration import (
 )
 
 # Import from deckGeneration.
-from src.deckGeneration import ( 
-    createDeck, 
-    createBasicModel, 
+from src.deckGeneration import (
+    createDeck,
+    createBasicModel,
     createPackage,
     addNote,
     createClozeModel)

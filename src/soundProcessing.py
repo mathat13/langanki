@@ -66,7 +66,7 @@ def addSound(word_info):
                 print("Sound downloaded to:", soundLocation)
 
                 # Add file to word_info for mediaDB
-                word_info['sound_mediadb'] = soundLocation[0]
+                word_info['sound_mediadb'] = soundLocation
                 
             else:
                 print("Failed to retrieve sound URL.")
