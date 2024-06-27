@@ -85,6 +85,7 @@ def createPackage(deck, mediaDB):
     # Create package for import to Anki.
     myPackage = genanki.Package(deck)
     # Generate MediaDB of images and sound files with createMediaDB.
+    outputPackage = f"{deck.name}.apkg"
     myPackage.media_files = mediaDB
-    myPackage.write_to_file(pathJoiner(loadConfig("package_path"), 'ItalianVocabTest.apkg'))
+    myPackage.write_to_file(pathJoiner(loadConfig("package_path"), outputPackage))
     return True

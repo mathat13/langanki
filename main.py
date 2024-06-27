@@ -13,11 +13,12 @@ mediaDB = []
 myModel = langanki.createBasicModel()
 myClozeModel = langanki.createClozeModel()
 modelDB = [myModel, myClozeModel]
-myDeck = langanki.createDeck(2059400190, 'ItalianVocabTest')
+myDeck = langanki.createDeck(2059400191, 'ItalianVocab')
 
 # Deck IDs:
 # 2059400190: ItalianVocabTest
-# 
+# 2059400191: ItalianVocab
+#
 
 for word in wordlist:
     # Set the model for the current word
